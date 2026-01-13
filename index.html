@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mansha Motors - Premium Cars & Luxury Experience</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-900 bg-gray-50">
+    
+    <!-- Scroll Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 z-50 w-full transition-all duration-500" id="navbar">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold text-white">
+                        <span class="text-yellow-400">Mansha</span> Motors
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="items-center hidden space-x-8 md:flex">
+                    <a href="#home" class="font-medium text-white hover:text-yellow-400">Home</a>
+                    <a href="#about" class="font-medium text-white hover:text-yellow-400">About</a>
+                    <a href="#contact" class="font-medium text-white hover:text-yellow-400">Contact</a>
+                    <a href="#cars" class="px-6 py-2 font-semibold text-black rounded-full btn-primary">
+                        View Cars
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="text-2xl text-white md:hidden" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="fixed top-0 right-0 z-50 w-64 h-full bg-black mobile-menu md:hidden" id="mobileMenu">
+        <div class="flex justify-end p-6">
+            <button class="text-2xl text-white" id="closeMobileMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="flex flex-col px-6 space-y-6">
+            <a href="#home" class="text-lg font-medium text-white hover:text-yellow-400 mobile-link">Home</a>
+            <a href="#about" class="text-lg font-medium text-white hover:text-yellow-400 mobile-link">About</a>
+            <a href="#contact" class="text-lg font-medium text-white hover:text-yellow-400 mobile-link">Contact</a>
+            <a href="#cars" class="px-6 py-3 font-semibold text-center text-black rounded-full btn-primary mobile-link">
+                View Cars
+            </a>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section id="home" class="relative flex items-center justify-center h-screen overflow-hidden hero-bg">
+        <div class="absolute inset-0 opacity-50 bg-gradient-to-b from-transparent to-black"></div>
+        <div class="relative z-10 px-4 text-center fade-in">
+            <h1 class="mb-4 text-4xl font-bold text-white sm:text-5xl md:text-7xl md:mb-6">
+                <span class="text-yellow-400">Mansha</span> Motors
+            </h1>
+            <p class="px-4 mb-6 text-lg font-light text-gray-200 sm:text-xl md:text-2xl md:mb-8">
+                Premium Cars | Trusted Deals | Luxury Experience
+            </p>
+            <div class="flex flex-col items-center justify-center gap-4 px-4 sm:flex-row">
+                <a href="#cars" class="w-full px-8 py-4 text-base font-semibold text-center text-black rounded-full btn-primary md:text-lg sm:w-auto">
+                    Explore Cars
+                </a>
+                <a href="#contact" class="w-full px-8 py-4 text-base font-semibold text-center rounded-full btn-outlined md:text-lg sm:w-auto">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="absolute transform -translate-x-1/2 bottom-10 left-1/2 animate-bounce">
+            <i class="text-3xl text-yellow-400 fas fa-chevron-down"></i>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white md:py-20">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="grid items-center grid-cols-1 gap-8 lg:grid-cols-2 md:gap-12">
+                <!-- Left: Text Content -->
+                <div class="fade-in">
+                    <h2 class="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl gold-underline">
+                        About <span class="text-yellow-400">Mansha Motors</span>
+                    </h2>
+                    <p class="mb-4 text-base leading-relaxed text-gray-600 md:text-lg md:mb-6">
+                        With over a decade of excellence in the automotive industry, Mansha Motors has established itself as a trusted name in luxury car dealership. We pride ourselves on delivering premium vehicles and exceptional customer service.
+                    </p>
+                    <p class="mb-4 text-base leading-relaxed text-gray-600 md:text-lg md:mb-6">
+                        Every vehicle in our showroom undergoes rigorous inspection to ensure quality and reliability. Our commitment to transparency and customer satisfaction has earned us the trust of hundreds of satisfied clients.
+                    </p>
+                    <p class="mb-6 text-base leading-relaxed text-gray-600 md:text-lg md:mb-8">
+                        Whether you're looking for a sleek sedan, a powerful SUV, or a luxury sports car, Mansha Motors is your destination for premium automotive excellence.
+                    </p>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-4 md:gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-400 counter md:text-4xl" data-target="500">0</div>
+                            <p class="mt-2 text-sm font-medium text-gray-600 md:text-base">Cars Sold</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-400 counter md:text-4xl" data-target="300">0</div>
+                            <p class="mt-2 text-sm font-medium text-gray-600 md:text-base">Happy Clients</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-400 counter md:text-4xl" data-target="10">0</div>
+                            <p class="mt-2 text-sm font-medium text-gray-600 md:text-base">Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Image -->
+                <div class="mt-8 fade-in lg:mt-0">
+                    <img src="https://images.unsplash.com/photo-1562911791-c7a97b729ec5?w=800&q=80" 
+                         alt="Luxury Car Showroom" 
+                         class="w-full rounded-lg shadow-2xl card-hover">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Cars Section -->
+    <section id="cars" class="py-16 md:py-20 bg-gray-50">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="mb-12 text-center md:mb-16 fade-in">
+                <h2 class="inline-block mb-4 text-3xl font-bold sm:text-4xl md:text-5xl gold-underline">
+                    Featured <span class="text-yellow-400">Collection</span>
+                </h2>
+                <p class="mt-8 text-base text-gray-600 md:text-lg">Discover our handpicked selection of premium vehicles</p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8">
+                <!-- Car Card 1 -->
+                <div class="overflow-hidden bg-white rounded-lg shadow-lg card-hover fade-in">
+                    <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=600&q=80" 
+                         alt="Luxury Sedan" 
+                         class="object-cover w-full h-48 md:h-64">
+                    <div class="p-4 md:p-6">
+                        <h3 class="mb-2 text-xl font-bold md:text-2xl">Premium Sedan</h3>
+                        <p class="mb-4 text-sm text-gray-600 md:text-base">Elegant design with powerful performance</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-yellow-400 md:text-3xl">$45,000</span>
+                            <button class="px-4 py-2 text-sm font-semibold text-black rounded-full btn-primary md:px-6 md:text-base">
+                                Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Car Card 2 -->
+                <div class="overflow-hidden bg-white rounded-lg shadow-lg card-hover fade-in">
+                    <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600&q=80" 
+                         alt="Luxury SUV" 
+                         class="object-cover w-full h-48 md:h-64">
+                    <div class="p-4 md:p-6">
+                        <h3 class="mb-2 text-xl font-bold md:text-2xl">Luxury SUV</h3>
+                        <p class="mb-4 text-sm text-gray-600 md:text-base">Spacious comfort meets rugged capability</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-yellow-400 md:text-3xl">$68,000</span>
+                            <button class="px-4 py-2 text-sm font-semibold text-black rounded-full btn-primary md:px-6 md:text-base">
+                                Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Car Card 3 -->
+                <div class="overflow-hidden bg-white rounded-lg shadow-lg card-hover fade-in sm:col-span-2 lg:col-span-1">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80" 
+                         alt="Sports Car" 
+                         class="object-cover w-full h-48 md:h-64">
+                    <div class="p-4 md:p-6">
+                        <h3 class="mb-2 text-xl font-bold md:text-2xl">Sports Coupe</h3>
+                        <p class="mb-4 text-sm text-gray-600 md:text-base">Thrilling speed with stunning aesthetics</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-yellow-400 md:text-3xl">$92,000</span>
+                            <button class="px-4 py-2 text-sm font-semibold text-black rounded-full btn-primary md:px-6 md:text-base">
+                                Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white md:py-20">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="mb-12 text-center md:mb-16 fade-in">
+                <h2 class="inline-block mb-4 text-3xl font-bold sm:text-4xl md:text-5xl gold-underline">
+                    Get In <span class="text-yellow-400">Touch</span>
+                </h2>
+                <p class="mt-8 text-base text-gray-600 md:text-lg">We're here to help you find your dream car</p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 md:gap-12">
+                <!-- Left: Contact Info -->
+                <div class="fade-in">
+                    <div class="space-y-6 md:space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 p-3 bg-yellow-400 rounded-lg md:p-4">
+                                <i class="text-xl text-black fas fa-map-marker-alt md:text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="mb-2 text-lg font-bold md:text-xl">Address</h3>
+                                <p class="text-sm text-gray-600 md:text-base">Model Town, Bahawalpur<br>Punjab, Pakistan</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 p-3 bg-yellow-400 rounded-lg md:p-4">
+                                <i class="text-xl text-black fas fa-phone md:text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="mb-2 text-lg font-bold md:text-xl">Phone</h3>
+                                <p class="text-sm text-gray-600 md:text-base">+92 300 1234567<br>+92 301 7654321</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 p-3 bg-yellow-400 rounded-lg md:p-4">
+                                <i class="text-xl text-black fas fa-envelope md:text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="mb-2 text-lg font-bold md:text-xl">Email</h3>
+                                <p class="text-sm text-gray-600 md:text-base">info@manshamotors.com<br>sales@manshamotors.com</p>
+                            </div>
+                        </div>
+                        
+                        <a href="https://wa.me/923001234567" target="_blank" 
+                           class="inline-flex items-center px-6 py-3 space-x-2 text-sm font-semibold text-black rounded-full btn-primary md:px-8 md:py-4 md:text-base">
+                            <i class="text-xl fab fa-whatsapp md:text-2xl"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right: Contact Form -->
+                <div class="fade-in">
+                    <form id="contactForm" class="space-y-4 md:space-y-6">
+                        <div>
+                            <label class="block mb-2 text-sm font-medium text-gray-700 md:text-base">Name</label>
+                            <input type="text" id="name" 
+                                   class="w-full px-4 py-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 md:text-base"
+                                   placeholder="Your Name" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block mb-2 text-sm font-medium text-gray-700 md:text-base">Phone</label>
+                            <input type="tel" id="phone" 
+                                   class="w-full px-4 py-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 md:text-base"
+                                   placeholder="+92 300 1234567" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block mb-2 text-sm font-medium text-gray-700 md:text-base">Email</label>
+                            <input type="email" id="email" 
+                                   class="w-full px-4 py-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 md:text-base"
+                                   placeholder="your@email.com" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block mb-2 text-sm font-medium text-gray-700 md:text-base">Message</label>
+                            <textarea id="message" rows="4" 
+                                      class="w-full px-4 py-3 text-sm border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 md:text-base"
+                                      placeholder="Tell us about your dream car..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full py-3 text-base font-semibold text-black rounded-full btn-primary md:py-4 md:text-lg">
+                            Send Message
+                        </button>
+                    </form>
+                    
+                    <!-- Success Message -->
+                    <div id="successMessage" class="hidden p-4 mt-6 text-sm text-green-700 bg-green-100 border border-green-400 rounded-lg md:text-base">
+                        <i class="mr-2 fas fa-check-circle"></i>
+                        Thank you! We'll get back to you soon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-8 text-white bg-black md:py-12">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                <div>
+                    <h3 class="mb-4 text-xl font-bold md:text-2xl">
+                        <span class="text-yellow-400">Mansha</span> Motors
+                    </h3>
+                    <p class="text-sm text-gray-400 md:text-base">Your trusted partner in luxury automotive excellence.</p>
+                </div>
+                
+                <div>
+                    <h4 class="mb-4 text-lg font-bold md:text-xl">Quick Links</h4>
+                    <ul class="space-y-2 text-sm md:text-base">
+                        <li><a href="#home" class="text-gray-400 hover:text-yellow-400">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-yellow-400">About</a></li>
+                        <li><a href="#cars" class="text-gray-400 hover:text-yellow-400">Cars</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-yellow-400">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="mb-4 text-lg font-bold md:text-xl">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl text-gray-400 md:text-3xl hover:text-yellow-400">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-2xl text-gray-400 md:text-3xl hover:text-yellow-400">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-2xl text-gray-400 md:text-3xl hover:text-yellow-400">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-2xl text-gray-400 md:text-3xl hover:text-yellow-400">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 mt-8 text-sm text-center text-gray-400 border-t border-gray-800 md:text-base">
+                <p>&copy; 2026 Mansha Motors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923001234567" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

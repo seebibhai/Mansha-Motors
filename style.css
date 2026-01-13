@@ -1,0 +1,333 @@
+/* ================================
+   MANSHA MOTORS - CUSTOM CSS
+   ================================ */
+
+/* Global Styles */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth transitions globally */
+* {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Remove transition from specific elements for performance */
+.hero-bg, .progress-bar {
+    transition: none;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================================
+   HERO SECTION
+   ================================ */
+
+.hero-bg {
+    background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%), 
+                url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=1920&q=80') center/cover no-repeat;
+    animation: subtleZoom 20s ease-in-out infinite alternate;
+    position: relative;
+}
+
+@keyframes subtleZoom {
+    0% { 
+        transform: scale(1); 
+    }
+    100% { 
+        transform: scale(1.05); 
+    }
+}
+
+/* ================================
+   ANIMATIONS
+   ================================ */
+
+/* Fade in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================================
+   NAVBAR
+   ================================ */
+
+/* Navbar transparency on scroll */
+.navbar-scrolled {
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ================================
+   BUTTONS
+   ================================ */
+
+/* Primary Button */
+.btn-primary {
+    background: linear-gradient(135deg, #FACC15 0%, #FFD700 100%);
+    box-shadow: 0 4px 15px rgba(250, 204, 21, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(250, 204, 21, 0.5);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(250, 204, 21, 0.3);
+}
+
+/* Outlined Button */
+.btn-outlined {
+    border: 2px solid #FACC15;
+    color: #FACC15;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outlined:hover {
+    background: #FACC15;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.btn-outlined:active {
+    transform: translateY(0);
+}
+
+/* ================================
+   CARDS
+   ================================ */
+
+/* Card hover effect */
+.card-hover {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ================================
+   MOBILE MENU
+   ================================ */
+
+/* Mobile menu animation */
+.mobile-menu {
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+/* ================================
+   SCROLL PROGRESS BAR
+   ================================ */
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #FACC15 0%, #FFD700 100%);
+    z-index: 9999;
+    width: 0;
+}
+
+/* ================================
+   WHATSAPP FLOATING BUTTON
+   ================================ */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
+    z-index: 1000;
+    animation: pulse 2s infinite;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.7);
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.05); 
+    }
+}
+
+/* ================================
+   GOLD UNDERLINE
+   ================================ */
+
+.gold-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.gold-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #FACC15 0%, #FFD700 100%);
+    border-radius: 2px;
+}
+
+/* ================================
+   FORM STYLES
+   ================================ */
+
+/* Form focus effects */
+input:focus, 
+textarea:focus {
+    outline: none;
+    border-color: #FACC15;
+    box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.1);
+}
+
+input, 
+textarea {
+    transition: all 0.3s ease;
+}
+
+/* ================================
+   COUNTER ANIMATION
+   ================================ */
+
+.counter {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+   ================================ */
+
+/* Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    .hero-bg h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-bg p {
+        font-size: 1rem;
+    }
+    
+    .counter {
+        font-size: 1.75rem;
+    }
+    
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Tablet (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .hero-bg h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-bg p {
+        font-size: 1.125rem;
+    }
+    
+    .counter {
+        font-size: 2rem;
+    }
+}
+
+/* Desktop (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-bg h1 {
+        font-size: 3rem;
+    }
+    
+    .counter {
+        font-size: 2.25rem;
+    }
+}
+
+/* Large Desktop (1025px+) */
+@media (min-width: 1025px) {
+    .hero-bg h1 {
+        font-size: 4rem;
+    }
+}
+
+/* ================================
+   ACCESSIBILITY
+   ================================ */
+
+/* Focus visible for keyboard navigation */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #FACC15;
+    outline-offset: 2px;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ================================
+   PRINT STYLES
+   ================================ */
+
+@media print {
+    .whatsapp-float,
+    .progress-bar,
+    nav,
+    .mobile-menu {
+        display: none;
+    }
+}
